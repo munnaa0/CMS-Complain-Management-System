@@ -257,6 +257,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Contributors
 
 - Md. Sultan Mahmud Munna - _Initial work_
+- Copilot - Claude Sonnet 4.5
 
 ## 🙏 Acknowledgments
 
