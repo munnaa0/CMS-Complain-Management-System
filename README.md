@@ -268,7 +268,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For questions or support, please contact:
 
-- Email: your.email@example.com
+- Email: munna.syc@gmail.com
 - GitHub: [@munnaa0](https://github.com/munnaa0)
 
 ## 🔮 Future Enhancements
