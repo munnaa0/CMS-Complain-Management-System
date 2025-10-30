@@ -93,7 +93,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/CMS.git
+git clone https://github.com/munnaa0/CMS.git
 cd CMS
 ```
 
