@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CMS">
+        
+        <!-- Login Activity - Launcher -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- Register Activity -->
+        <activity
+            android:name=".RegisterActivity"
+            android:exported="false" />
+        
+        <!-- Manager Dashboard Activity -->
+        <activity
+            android:name=".ManagerDashboardActivity"
+            android:exported="false" />
+        
+        <!-- User Dashboard Activity -->
+        <activity
+            android:name=".UserDashboardActivity"
+            android:exported="false" />
+        
+        <!-- Create Institution Activity -->
+        <activity
+            android:name=".CreateInstitutionActivity"
+            android:exported="false" />
+        
+        <!-- Institution Detail Activity -->
+        <activity
+            android:name=".InstitutionDetailActivity"
+            android:exported="false" />
+        
+        <!-- Add Roles Activity -->
+        <activity
+            android:name=".AddRolesActivity"
+            android:exported="false" />
+        
+        <!-- Join Institution Activity -->
+        <activity
+            android:name=".JoinInstitutionActivity"
+            android:exported="false" />
+        
+        <!-- User Institution Detail Activity -->
+        <activity
+            android:name=".UserInstitutionDetailActivity"
+            android:exported="false" />
+        
+        <!-- Submit Report Activity -->
+        <activity
+            android:name=".SubmitReportActivity"
+            android:exported="false" />
+        
+        <!-- View My Reports Activity -->
+        <activity
+            android:name=".ViewMyReportsActivity"
+            android:exported="false" />
+        
+        <!-- View All Reports Activity (Manager) -->
+        <activity
+            android:name=".ViewAllReportsActivity"
+            android:exported="false" />
+        
+        <!-- Manage Report Activity (Manager) -->
+        <activity
+            android:name=".ManageReportActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

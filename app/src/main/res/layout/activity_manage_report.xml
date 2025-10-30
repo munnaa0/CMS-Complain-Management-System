@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Complaint Management System"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Institution Name -->
+        <TextView
+            android:id="@+id/institutionNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Institution Name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/appTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/pageTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Manage Report"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/institutionNameText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Report Title -->
+        <TextView
+            android:id="@+id/reportTitleLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Report Title:"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            app:layout_constraintTop_toBottomOf="@id/pageTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <TextView
+            android:id="@+id/reportTitleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Report Title"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/reportTitleLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Submitted By -->
+        <TextView
+            android:id="@+id/submittedByText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Submitted by: User Name - Role: Student"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            app:layout_constraintTop_toBottomOf="@id/reportTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Submitted On -->
+        <TextView
+            android:id="@+id/submittedOnText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Submitted on: Jan 1, 2024"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            app:layout_constraintTop_toBottomOf="@id/submittedByText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="4dp"/>
+
+        <!-- Description Label -->
+        <TextView
+            android:id="@+id/descriptionLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Description:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/submittedOnText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Description Text -->
+        <TextView
+            android:id="@+id/descriptionText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Report description will appear here."
+            android:textSize="14sp"
+            android:textColor="#212121"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:minHeight="100dp"
+            app:layout_constraintTop_toBottomOf="@id/descriptionLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Current Status Label -->
+        <TextView
+            android:id="@+id/currentStatusLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Current Status:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/descriptionText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Status Spinner -->
+        <Spinner
+            android:id="@+id/statusSpinner"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            app:layout_constraintTop_toBottomOf="@id/currentStatusLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Manager Response Label -->
+        <TextView
+            android:id="@+id/responseLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Manager Response:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/statusSpinner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Manager Response EditText -->
+        <EditText
+            android:id="@+id/responseEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter your response to the user..."
+            android:textColorHint="#9E9E9E"
+            android:textColor="#212121"
+            android:textSize="14sp"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:minHeight="120dp"
+            android:gravity="top|start"
+            android:inputType="textMultiLine"
+            app:layout_constraintTop_toBottomOf="@id/responseLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Update Report Button -->
+        <Button
+            android:id="@+id/updateReportButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Update Report"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_primary_background"
+            app:layout_constraintTop_toBottomOf="@id/responseEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Back"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_secondary_background"
+            app:layout_constraintTop_toBottomOf="@id/updateReportButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

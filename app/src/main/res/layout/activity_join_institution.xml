@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".JoinInstitutionActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complaint Management System"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Institution"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/appTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Institution Name Input Label -->
+        <TextView
+            android:id="@+id/institutionNameLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Search Institution by Name:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Institution Name Input -->
+        <EditText
+            android:id="@+id/institutionNameEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Institution Name"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/institutionNameLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Search Button -->
+        <Button
+            android:id="@+id/searchButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Search Institution"
+            android:background="@drawable/button_primary_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/institutionNameEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Institution Details Container (Initially Hidden) -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/institutionDetailsContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/searchButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp">
+
+            <!-- Institution Name -->
+            <TextView
+                android:id="@+id/institutionNameText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Institution Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                android:gravity="center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Select Role Label -->
+            <TextView
+                android:id="@+id/selectRoleLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Select Your Role:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#212121"
+                app:layout_constraintTop_toBottomOf="@id/institutionNameText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Roles Container (ScrollView for dynamic roles) -->
+            <ScrollView
+                android:id="@+id/rolesScrollView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:maxHeight="200dp"
+                app:layout_constraintTop_toBottomOf="@id/selectRoleLabel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="8dp">
+
+                <RadioGroup
+                    android:id="@+id/rolesRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"/>
+
+            </ScrollView>
+
+            <!-- Join Button -->
+            <Button
+                android:id="@+id/joinButton"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:text="Join as Selected Role"
+                android:background="@drawable/button_primary_background"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/rolesScrollView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="16dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Cancel"
+            android:background="@drawable/button_secondary_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/institutionDetailsContainer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- All Institutions Section -->
+        <TextView
+            android:id="@+id/allInstitutionsLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="All Available Institutions:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/cancelButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="32dp"/>
+
+        <!-- Institutions List Container -->
+        <LinearLayout
+            android:id="@+id/institutionsListContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/allInstitutionsLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

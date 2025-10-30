@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".AddRolesActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complaint Management System"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Page Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add New Roles"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/appTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Institution Name -->
+        <TextView
+            android:id="@+id/institutionNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Institution Name"
+            android:textSize="16sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/titleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Current Roles Label -->
+        <TextView
+            android:id="@+id/currentRolesLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Current Roles:"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/institutionNameText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Current Roles List -->
+        <TextView
+            android:id="@+id/currentRolesText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Loading..."
+            android:textSize="14sp"
+            android:textColor="#757575"
+            app:layout_constraintTop_toBottomOf="@id/currentRolesLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- New Roles Input Label -->
+        <TextView
+            android:id="@+id/newRolesLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Enter New Roles (comma-separated):"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/currentRolesText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- New Roles Input -->
+        <EditText
+            android:id="@+id/newRolesEditText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="e.g. Staff, Admin, Coordinator"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:textColor="#212121"
+            android:textColorHint="#9E9E9E"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@id/newRolesLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Add Roles Button -->
+        <Button
+            android:id="@+id/addRolesButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Add Roles"
+            android:background="@drawable/button_primary_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/newRolesEditText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Cancel Button -->
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Cancel"
+            android:background="@drawable/button_secondary_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/addRolesButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- ProgressBar -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

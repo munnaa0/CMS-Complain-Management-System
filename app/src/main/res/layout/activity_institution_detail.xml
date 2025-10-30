@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".InstitutionDetailActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <!-- App Title -->
+        <TextView
+            android:id="@+id/appTitleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Complaint Management System"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Institution Name -->
+        <TextView
+            android:id="@+id/institutionNameText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Institution Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/appTitleText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Manager Info -->
+        <TextView
+            android:id="@+id/managerInfoText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Manager: Name (Role)"
+            android:textSize="14sp"
+            android:textColor="#757575"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/institutionNameText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Roles Label -->
+        <TextView
+            android:id="@+id/rolesLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Available Roles:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/managerInfoText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Roles List -->
+        <TextView
+            android:id="@+id/rolesListText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Role1, Role2, Role3"
+            android:textSize="16sp"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/rolesLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- Add More Roles Button -->
+        <Button
+            android:id="@+id/addRolesButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Add More Roles"
+            android:background="@drawable/button_primary_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/rolesListText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Reports Section Label -->
+        <TextView
+            android:id="@+id/reportsLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Reports Summary:"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/addRolesButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="24dp"/>
+
+        <!-- Reports Statistics -->
+        <TextView
+            android:id="@+id/reportsStatsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Total: 0 | Pending: 0 | Investigating: 0 | Verified: 0 | Rejected: 0"
+            android:textSize="14sp"
+            android:textColor="#212121"
+            app:layout_constraintTop_toBottomOf="@id/reportsLabel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"/>
+
+        <!-- View All Reports Button -->
+        <Button
+            android:id="@+id/viewReportsButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="View All Reports"
+            android:background="@drawable/button_primary_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/reportsStatsText"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:text="Back"
+            android:background="@drawable/button_secondary_background"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@id/viewReportsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

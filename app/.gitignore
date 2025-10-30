@@ -1,0 +1,5 @@
+# Build directory
+/build
+
+# Google Services
+google-services.json
